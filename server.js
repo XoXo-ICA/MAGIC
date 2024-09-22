@@ -1,6 +1,3 @@
-// Install Express and body-parser
-// npm install express body-parser cors
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');

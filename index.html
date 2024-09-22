@@ -135,6 +135,71 @@ div.gallery{
 <a href="comment.html">
   <button>Send a review!</button>
 </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Commento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .commento-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007BFF;
+        }
+        .commento {
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+        .commento .comment {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+        }
+        .commento .comment .author {
+            font-weight: bold;
+        }
+        .commento .comment .date {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .commento .comment .content {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
 
-<script defer src="https://cdn.commento.io/js/commento.js"></script>
-<div id="commento"></div>
+<div class="commento-container">
+    <h1>Comments</h1>
+    <div id="commento"></div>
+</div>
+
+<script src="https://cdn.commento.io/js/commento.js"></script>
+<script>
+    (function() {
+        var commento = document.createElement('script');
+        commento.src = 'https://cdn.commento.io/js/commento.js';
+        commento.setAttribute('data-auto-init', 'true');
+        document.getElementById('commento').appendChild(commento);
+    })();
+</script>
+
+</body>
+</html>

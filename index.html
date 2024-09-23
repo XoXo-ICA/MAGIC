@@ -130,6 +130,11 @@
             margin-top: 5px;
         }
 
+        .dropdown {
+            position: relative; /* Necessary for absolute positioning of dropdown */
+            display: inline-block; /* Align the button properly */
+        }
+
         .dropdown-content {
             display: none;
             position: absolute;
@@ -139,14 +144,11 @@
             margin-top: 10px;
             padding: 10px;
             border-radius: 5px;
-            left: 0; /* Align dropdown with button */
+            left: 50%; /* Center it under the button */
+            transform: translateX(-50%); /* Shift it back to the left */
         }
 
         .dropdown-content.show {
-            display: block;
-        }
-
-        .dropdown:hover .dropdown-content {
             display: block;
         }
 

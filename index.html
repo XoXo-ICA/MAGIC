@@ -56,10 +56,15 @@
             font-size: large;
         }
 
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 50px;
+        }
+
         div.gallery {
             margin: 5px;
-            margin-left: 50px;
-            float: left;
             max-width: calc(100% - 100px);
         }
 
@@ -75,9 +80,6 @@
         }
 
         .socials {
-            position: absolute;
-            top: 15px; /* Adjust as needed */
-            right: 20px; /* Adjust as needed */
             display: flex;
             gap: 10px; /* Space between icons */
         }
@@ -141,22 +143,19 @@
                 margin-left: 10px;
             }
 
-            .socials {
-                position: relative; /* Stack on mobile */
-                top: 0;
-                right: 0;
-                justify-content: flex-end; /* Align icons to the right */
-            }
-
-            div.branch img, div.Roblox img {
-                width: 30px; /* Adjust size for mobile */
-                height: 30px; /* Adjust size for mobile */
-            }
-
             div.gallery {
                 float: none;
                 margin: 10px 0;
                 width: calc(100% - 20px);
+            }
+
+            .content-container {
+                flex-direction: column; /* Stack content on mobile */
+                align-items: flex-start; /* Align to the start */
+            }
+
+            .socials {
+                margin-top: 10px; /* Add spacing above icons */
             }
         }
     </style>
@@ -187,13 +186,15 @@
     </div>
 </div>
 
-<div class="socials">
-    <a target="_blank" href="https://discord.gg/3dgSZuxx4p">
-        <img src="discord.webp" alt="Discord" style="width: 50px; height: 50px;">
-    </a>
-    <a target="_blank" href="https://www.roblox.com/users/1603419401/profile">
-        <img src="roblox.png" alt="Roblox" style="width: 35px; height: 35px;">
-    </a>
+<div class="content-container">
+    <div class="socials">
+        <a target="_blank" href="https://discord.gg/3dgSZuxx4p">
+            <img src="discord.webp" alt="Discord" style="width: 50px; height: 50px;">
+        </a>
+        <a target="_blank" href="https://www.roblox.com/users/1603419401/profile">
+            <img src="roblox.png" alt="Roblox" style="width: 35px; height: 35px;">
+        </a>
+    </div>
 </div>
 
 <a href="comment.html">

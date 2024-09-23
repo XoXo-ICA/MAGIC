@@ -130,6 +130,21 @@
             margin-top: 5px;
         }
 
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         @media (max-width: 600px) {
             div.back, div.LOP, div.Alpha {
                 margin: 0 10px;
@@ -158,15 +173,20 @@
     </style>
 </head>
 <body>
-
 <h2 class="z">PORTFOLIO
-    <div class="socials">
-        <a target="_blank" href="https://discord.gg/3dgSZuxx4p">
-            <img src="discord.webp" alt="Discord" style="width: 50px; height: 50px;">
-        </a>
-        <a target="_blank" href="https://www.roblox.com/users/1603419401/profile">
-            <img src="roblox.png" alt="Roblox" style="width: 35px; height: 35px;">
-        </a>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown()">▼</button>
+        <div id="myDropdown" class="dropdown-content">
+            <div class="socials">
+                <a target="_blank" href="https://discord.gg/3dgSZuxx4p">
+                    <img src="discord.webp" alt="Discord" style="width: 50px; height: 50px;">
+                </a>
+                <a target="_blank" href="https://www.roblox.com/users/1603419401/profile">
+                    <img src="roblox.png" alt="Roblox" style="width: 35px; height: 35px;">
+                </a>
+            </div>
+            <a href="comment.html">Send a review!</a>
+        </div>
     </div>
 </h2>
 <header>About Me</header>
@@ -192,10 +212,6 @@
     </div>
 </div>
 
-<a href="comment.html">
-    <button>Send a review!</button>
-</a>
-
 <!-- Comments Section -->
 <div class="commento-container">
     <h1>Comments</h1>
@@ -203,6 +219,23 @@
 </div>
 
 <script>
+    function toggleDropdown() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    };
+
     (function() {
         var commento = document.createElement('script');
         commento.src = 'https://cdn.commento.io/js/commento.js';
@@ -210,6 +243,12 @@
         document.getElementById('commento').appendChild(commento);
     })();
 </script>
+
+<style>
+    .dropdown-content.show {
+        display: block;
+    }
+</style>
 
 </body>
 </html>

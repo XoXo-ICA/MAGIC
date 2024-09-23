@@ -19,7 +19,9 @@
             font-size: x-large;
             background-color: rgb(16, 10, 51);
             font-style: italic;
-            position: relative; /* Position for absolute elements */
+            display: flex;
+            justify-content: space-between; /* Aligns content */
+            align-items: center; /* Centers vertically */
         }
 
         header {
@@ -56,16 +58,14 @@
             font-size: large;
         }
 
-        .content-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .clearfix {
             margin: 0 50px;
         }
 
         div.gallery {
             margin: 5px;
             max-width: calc(100% - 100px);
+            float: left;
         }
 
         div.desc {
@@ -82,6 +82,7 @@
         .socials {
             display: flex;
             gap: 10px; /* Space between icons */
+            align-items: center; /* Center icons vertically */
         }
 
         .commento-container {
@@ -128,12 +129,6 @@
             margin-top: 5px;
         }
 
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
         @media (max-width: 600px) {
             div.back, div.LOP, div.Alpha {
                 margin: 0 10px;
@@ -149,12 +144,13 @@
                 width: calc(100% - 20px);
             }
 
-            .content-container {
-                flex-direction: column; /* Stack content on mobile */
-                align-items: flex-start; /* Align to the start */
+            h2.z {
+                flex-direction: column; /* Stack on mobile */
+                align-items: flex-start; /* Align left */
             }
 
             .socials {
+                justify-content: flex-end; /* Align to right */
                 margin-top: 10px; /* Add spacing above icons */
             }
         }
@@ -162,7 +158,16 @@
 </head>
 <body>
 
-<h2 class="z">PORTFOLIO</h2>
+<h2 class="z">PORTFOLIO
+    <div class="socials">
+        <a target="_blank" href="https://discord.gg/3dgSZuxx4p">
+            <img src="discord.webp" alt="Discord" style="width: 50px; height: 50px;">
+        </a>
+        <a target="_blank" href="https://www.roblox.com/users/1603419401/profile">
+            <img src="roblox.png" alt="Roblox" style="width: 35px; height: 35px;">
+        </a>
+    </div>
+</h2>
 <header>About Me</header>
 <div class="back">Hi, I'm Nick (Paradox0xy). I'm currently 17 and have been working for about 4 years now in the Roblox developer industry (4 years in building, about 1 and one half of a year in modeling). My main proficiencies include building and modeling at the moment; however, I am also currently studying and dabbling in scripting, web design, and a bit of animating. Aside from my work as a Roblox developer, I am also studying and taking courses on how to be a future IT systems admin. I hope to someday make a career of it as I'm sort of a big fan of this tech stuff. In addition to my career, some soft skills I have include leadership, communication, and responsibility. Outside of my work and studies, you can probably catch me around playing one of my favorite sports, soccer/Fútbol or hanging out with friends.</div>
 
@@ -183,17 +188,6 @@
             <img src="Screenshot (299).png" alt="Certificate 2" style="max-width: 100%; height: auto;">
         </a>
         <div class="desc">This certificate was earned for completing an online course which taught the basics of Debian Linux.</div>
-    </div>
-</div>
-
-<div class="content-container">
-    <div class="socials">
-        <a target="_blank" href="https://discord.gg/3dgSZuxx4p">
-            <img src="discord.webp" alt="Discord" style="width: 50px; height: 50px;">
-        </a>
-        <a target="_blank" href="https://www.roblox.com/users/1603419401/profile">
-            <img src="roblox.png" alt="Roblox" style="width: 35px; height: 35px;">
-        </a>
     </div>
 </div>
 

@@ -58,7 +58,7 @@
             margin: 5px;
             margin-left: 50px;
             float: left;
-            max-width: 100%; /* Ensures it doesn't overflow */
+            max-width: calc(100% - 100px); /* Ensure it doesn't overflow */
         }
 
         div.desc {
@@ -72,16 +72,18 @@
             background-color: rgb(69, 135, 197);
         }
 
-        div.branch {
+        div.branch, div.Roblox {
             position: absolute;
             top: 25px;
+        }
+
+        div.branch {
             right: 50px;
         }
 
         div.Roblox {
-            position: absolute;
-            top: 32px;
             right: 100px;
+            top: 32px;
         }
 
         .commento-container {
@@ -128,6 +130,13 @@
             margin-top: 5px;
         }
 
+        /* Clear floats after the gallery */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
         @media (max-width: 600px) {
             div.back, div.LOP, div.Alpha {
                 margin: 0 10px; /* Reduce margin for smaller screens */
@@ -165,18 +174,20 @@
 <div class="Alpha"><p>Certifications and Awards</p></div>
 <p>Below me are some milestones I've hit on my life's journey from the biggest to the smallest. (Yes, this would include the one time I placed 2nd in a 7th grade Spelling Bee)...</p>
 
-<div class="gallery">
-    <a target="_blank" href="Screenshot (300).png">
-        <img src="Screenshot (300).png" height="auto" alt="Cinque Terre">
-    </a>
-    <div class="desc">This certificate was earned for completing an online course that taught the fundamentals of the coding language, Lua.</div>
-</div>
+<div class="clearfix"> <!-- Added clearfix here -->
+    <div class="gallery">
+        <a target="_blank" href="Screenshot (300).png">
+            <img src="Screenshot (300).png" height="auto" alt="Cinque Terre">
+        </a>
+        <div class="desc">This certificate was earned for completing an online course that taught the fundamentals of the coding language, Lua.</div>
+    </div>
 
-<div class="gallery">
-    <a target="_blank" href="Screenshot (299).png">
-        <img src="Screenshot (299).png" alt="Forest" width="500" height="500">
-    </a>
-    <div class="desc">This certificate was earned for completing an online course which taught the basics of Debian Linux.</div>
+    <div class="gallery">
+        <a target="_blank" href="Screenshot (299).png">
+            <img src="Screenshot (299).png" alt="Forest" width="500" height="500">
+        </a>
+        <div class="desc">This certificate was earned for completing an online course which taught the basics of Debian Linux.</div>
+    </div>
 </div>
 
 <div class="branch">

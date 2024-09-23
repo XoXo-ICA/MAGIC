@@ -131,8 +131,8 @@
         }
 
         .dropdown {
-            position: relative; /* Necessary for absolute positioning of dropdown */
-            display: inline-block; /* Align the button properly */
+            position: relative;
+            display: inline-block;
         }
 
         .dropdown-content {
@@ -146,6 +146,8 @@
             border-radius: 5px;
             left: 50%; /* Center it under the button */
             transform: translateX(-50%); /* Shift it back to the left */
+            max-width: 200px; /* Set a maximum width */
+            width: auto; /* Allow it to shrink */
         }
 
         .dropdown-content.show {
@@ -230,7 +232,6 @@
         document.getElementById("myDropdown").classList.toggle("show");
     }
 
-    // Close the dropdown if the user clicks outside of it
     window.onclick = function(event) {
         if (!event.target.matches('.dropbtn')) {
             var dropdowns = document.getElementsByClassName("dropdown-content");

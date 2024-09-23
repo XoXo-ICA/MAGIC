@@ -19,6 +19,7 @@
             font-size: x-large;
             background-color: rgb(16, 10, 51);
             font-style: italic;
+            position: relative; /* Position for absolute elements */
         }
 
         header {
@@ -75,8 +76,8 @@
 
         .socials {
             position: absolute;
-            top: 25px;
-            right: 50px;
+            top: 15px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
             display: flex;
             gap: 10px; /* Space between icons */
         }
@@ -141,8 +142,8 @@
             }
 
             .socials {
-                position: relative;
-                top: 10px;
+                position: relative; /* Stack on mobile */
+                top: 0;
                 right: 0;
                 justify-content: flex-end; /* Align icons to the right */
             }

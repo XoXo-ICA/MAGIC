@@ -73,18 +73,12 @@
             background-color: rgb(69, 135, 197);
         }
 
-        div.branch, div.Roblox {
+        .socials {
             position: absolute;
             top: 25px;
-        }
-
-        div.branch {
             right: 50px;
-        }
-
-        div.Roblox {
-            right: 100px;
-            top: 32px;
+            display: flex;
+            gap: 10px; /* Space between icons */
         }
 
         .commento-container {
@@ -146,12 +140,11 @@
                 margin-left: 10px;
             }
 
-            div.branch, div.Roblox {
+            .socials {
                 position: relative;
+                top: 10px;
                 right: 0;
-                top: 0;
-                margin: 10px;
-                display: inline-block; /* Align icons side by side */
+                justify-content: flex-end; /* Align icons to the right */
             }
 
             div.branch img, div.Roblox img {
@@ -193,12 +186,10 @@
     </div>
 </div>
 
-<div class="branch">
+<div class="socials">
     <a target="_blank" href="https://discord.gg/3dgSZuxx4p">
         <img src="discord.webp" alt="Discord" style="width: 50px; height: 50px;">
     </a>
-</div>
-<div class="Roblox">
     <a target="_blank" href="https://www.roblox.com/users/1603419401/profile">
         <img src="roblox.png" alt="Roblox" style="width: 35px; height: 35px;">
     </a>

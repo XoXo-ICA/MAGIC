@@ -12,7 +12,7 @@
 
         h2.z {
             color: white;
-            height: 50px;
+            height: auto; /* Allow height to adjust */
             border: solid;
             border-color: rgb(0, 0, 0);
             border-radius: 3px;
@@ -22,6 +22,7 @@
             display: flex;
             justify-content: space-between; /* Align content */
             align-items: center; /* Center vertically */
+            padding: 10px; /* Add some padding */
         }
 
         header {
@@ -145,15 +146,13 @@
             }
 
             h2.z {
-                flex-direction: column; /* Stack on mobile */
-                align-items: flex-start; /* Align left */
+                flex-direction: row; /* Keep in a row on mobile */
+                align-items: center; /* Center vertically */
             }
 
             .socials {
                 justify-content: flex-end; /* Align to right */
-                margin-top: 10px; /* Add spacing above icons */
-                width: 100%; /* Full width to push to the right */
-                display: flex; /* Ensure it stays a flex container */
+                margin-left: auto; /* Push icons to the right */
             }
         }
     </style>

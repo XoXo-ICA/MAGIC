@@ -59,7 +59,7 @@
             margin: 5px;
             margin-left: 50px;
             float: left;
-            max-width: calc(100% - 100px); /* Ensure it doesn't overflow */
+            max-width: calc(100% - 100px);
         }
 
         div.desc {
@@ -73,28 +73,14 @@
             background-color: rgb(69, 135, 197);
         }
 
-        div.branch, div.Roblox {
-            position: absolute;
-            top: 25px;
-        }
-
-        div.branch {
-            right: 50px;
-        }
-
-        div.Roblox {
-            right: 100px;
-            top: 32px;
-        }
-
         .commento-container {
             max-width: 800px;
-            margin: 20px auto; /* Center and add spacing */
+            margin: 20px auto;
             background: white;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden; /* Prevent overflow */
+            overflow: hidden;
         }
 
         h1 {
@@ -105,8 +91,8 @@
         }
 
         .commento {
-            max-height: 300px; /* Limit height for scroll */
-            overflow-y: auto; /* Add scroll bar */
+            max-height: 300px;
+            overflow-y: auto;
             border-top: 1px solid #dddddd;
             padding-top: 10px;
         }
@@ -131,7 +117,6 @@
             margin-top: 5px;
         }
 
-        /* Clear floats after the gallery */
         .clearfix::after {
             content: "";
             clear: both;
@@ -140,24 +125,17 @@
 
         @media (max-width: 600px) {
             div.back, div.LOP, div.Alpha {
-                margin: 0 10px; /* Reduce margin for smaller screens */
+                margin: 0 10px;
             }
 
             p {
-                margin-left: 10px; /* Adjust for mobile */
-            }
-
-            div.branch, div.Roblox {
-                position: relative; /* Stack for smaller screens */
-                right: 0;
-                top: 0;
-                margin: 10px;
+                margin-left: 10px;
             }
 
             div.gallery {
-                float: none; /* Stack images vertically on small screens */
-                margin: 10px 0; /* Add spacing */
-                width: calc(100% - 20px); /* Responsive width */
+                float: none;
+                margin: 10px 0;
+                width: calc(100% - 20px);
             }
         }
     </style>
@@ -166,40 +144,26 @@
 
 <h2 class="z">PORTFOLIO</h2>
 <header>About Me</header>
-<div class="back">Hi, I'm Nick (Paradox0xy). I'm currently 17 and have been working for about 4 years now in the Roblox developer industry (4 years in building, about 1 and one half of a year in modeling). My main proficiencies include building and modeling at the moment; however, I am also currently studying and dabbling in scripting, web design, and a bit of animating. 
- Aside from my work as a Roblox developer, I am also studying and taking courses on how to be a future IT systems admin. I hope to someday make a career of it as I'm sort of a big fan of this 
- tech stuff. In addition to my career, some soft skills I have include leadership, communication, and responsibility. Outside of my work and studies, you can probably catch me around playing one of my favorite sports, soccer/Fútbol or hanging out with friends.   
-</div>
+<div class="back">Hi, I'm Nick (Paradox0xy). I'm currently 17 and have been working for about 4 years now in the Roblox developer industry (4 years in building, about 1 and one half of a year in modeling). My main proficiencies include building and modeling at the moment; however, I am also currently studying and dabbling in scripting, web design, and a bit of animating. Aside from my work as a Roblox developer, I am also studying and taking courses on how to be a future IT systems admin. I hope to someday make a career of it as I'm sort of a big fan of this tech stuff. In addition to my career, some soft skills I have include leadership, communication, and responsibility. Outside of my work and studies, you can probably catch me around playing one of my favorite sports, soccer/Fútbol or hanging out with friends.</div>
 
 <div class="LOP">Work</div>
 <div class="Alpha"><p>Certifications and Awards</p></div>
-<p>Below me are some milestones I've hit on my life's journey from the biggest to the smallest. (Yes, this would include the one time I placed 2nd in a 7th grade Spelling Bee)...</p>
+<p>Below are some milestones I've hit on my life's journey from the biggest to the smallest. (Yes, this includes the one time I placed 2nd in a 7th grade Spelling Bee)...</p>
 
-<div class="clearfix"> <!-- Added clearfix here -->
+<div class="clearfix">
     <div class="gallery">
         <a target="_blank" href="Screenshot (300).png">
-            <img src="Screenshot (300).png" height="auto" alt="Cinque Terre">
+            <img src="Screenshot (300).png" alt="Certificate 1" style="max-width: 100%; height: auto;">
         </a>
         <div class="desc">This certificate was earned for completing an online course that taught the fundamentals of the coding language, Lua.</div>
     </div>
 
     <div class="gallery">
         <a target="_blank" href="Screenshot (299).png">
-            <img src="Screenshot (299).png" alt="Forest" width="500" height="500">
+            <img src="Screenshot (299).png" alt="Certificate 2" style="max-width: 100%; height: auto;">
         </a>
         <div class="desc">This certificate was earned for completing an online course which taught the basics of Debian Linux.</div>
     </div>
-</div>
-
-<div class="branch">
-    <a target="_blank" href="https://discord.gg/3dgSZuxx4p">
-        <img src="discord.webp" alt="Discord" width="50" height="50">
-    </a>
-</div>
-<div class="Roblox">
-    <a target="_blank" href="https://www.roblox.com/users/1603419401/profile">
-        <img src="roblox.png" alt="Roblox" width="35" height="35">
-    </a>
 </div>
 
 <a href="comment.html">
@@ -223,4 +187,3 @@
 
 </body>
 </html>
-
